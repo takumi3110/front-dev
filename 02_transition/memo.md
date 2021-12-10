@@ -281,3 +281,13 @@ ex.1 x軸に50px移動して、y軸方向に2倍大きくなる
 ```
 
 - animationを行うときは`transform`を使用するようにする。
+
+## 050_position and z-index
+
+- 親要素に`position: relative`の場合、子要素の`position:absolute`は親要素の起点に反映される
+  - 子要素のみについていた場合、起点がないので、htmlの起点までさかのぼってしまう(ページの左上)
+
+- `position: fixed;`で固定
+
+- `position: stickey;`で指定の場所までいったら固定
+  - `overflow: hidden;`が親要素にある場合無効化される
