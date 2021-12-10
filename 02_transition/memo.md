@@ -85,3 +85,96 @@ cssの文法として正しくないので&が必要
 
 - 1つの要素をまとめる場合、入れ子にするとコードが見やすくなる
 - sassファイルを使用する場合はcssファイルをいじらない
+
+- 親要素の中に子要素があり、子要素のみスタイルを変更したい場合
+
+```
+ex.1 クラスを追加する
+
+html
+<div class="parent">
+   親要素
+   <div class="child element">子要素</div>
+</div>
+
+scss
+.parent {
+    color: blue;
+}
+
+.child {
+    color: red;
+}
+
+ex.2 scssで入れ子にする
+html
+<div class="parent">
+    親要素
+    <div class="element">
+        子要素
+        <div class="element">
+            孫要素
+        </div>
+    </div>
+</div>
+
+scss
+.parent {
+    color: blue;
+    $ > .element {
+        color: red;
+    }
+}
+
+$ >を付けることで、parent直下のelementのみスタイルが適用になる。>がない場合、parentの中のelement全てに適用される（1階層下のみ）
+```
+
+- 複数のセレクターで指定したスタイルのほうが、単独で指定したときよりも詳細度が高いので優先して適用される
+
+```
+×
+html
+<div class="parent">
+    親要素
+    <div class="element">子要素</div>
+    <div class="second-child element">子要素</div>
+    <div class="element">
+        子要素
+        <div class="element">
+            孫要素
+        </div>
+    </div>
+</div>
+
+scss
+.parent {
+    color: blue;
+
+    & > .element {
+        color: purple;
+    }
+}
+
+.element {
+    color: red;
+}
+
+.second-child {
+    color: black;
+}
+
+〇
+scss
+.parent {
+    color: blue;
+
+    & > .element {
+        color: purple;
+        &.second-child {
+            color: black;
+        }
+    }
+}
+```
+
+
