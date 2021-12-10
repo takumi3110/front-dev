@@ -177,4 +177,107 @@ scss
 }
 ```
 
+- scss に `!important`で詳細度を無視できる。※非推奨
 
+## 040_transform
+
+- `translate`は物体を移動する
+
+```
+ex.1 x軸に50px、y軸に50px動く
+.rect {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: orangered;
+    transform: translate(50px, 50px);
+}
+```
+
+- `rotate`は物体を回転する
+
+```
+ex.1 30度右に回転する
+.rect {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: orangered;
+    transform: rotate(30deg);
+}
+
+ex.2 transform-originで起点の場所を指定できる
+左上を支点に回転
+.rect {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: orangered;
+    transform: rotate(30deg);
+    transform-origin: top left;
+}
+
+左下を支点に回転
+.rect {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: orangered;
+    transform: rotate(30deg);
+    transform-origin: bottom left;
+}
+
+任意の点を支点に回転
+.rect {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: orangered;
+    transform: rotate(30deg);
+    transform-origin: -20px -20px;
+}
+
+```
+
+- `skew`で平行四辺形みたくできる
+
+```
+.rect {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: orangered;
+    transform: skew(-30deg);
+    transform-origin: center center;
+}
+```
+
+- `scale(x, y)`で大きさを変更できる
+
+```
+ex.1 x軸、y軸に1.1倍大きくする
+.rect {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: orangered;
+    transform: scale(1.1, 1.1);
+    transform-origin: center center;
+}
+```
+
+- 組み合わせて複数の動きを持たせる
+
+```
+ex.1 x軸に50px移動して、y軸方向に2倍大きくなる
+.rect {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: orangered;
+    transform: translateX(50px) scaleY(2);
+    transform-origin: center center;
+}
+```
+
+- animationを行うときは`transform`を使用するようにする。
