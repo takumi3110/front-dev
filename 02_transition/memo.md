@@ -291,3 +291,18 @@ ex.1 x軸に50px移動して、y軸方向に2倍大きくなる
 
 - `position: stickey;`で指定の場所までいったら固定
   - `overflow: hidden;`が親要素にある場合無効化される
+
+## 070
+
+- 060でbuttonの前にspanタグをおいてスライドを作ったが、空のタグを置くのは非推奨
+- そのため、疑似要素を使用する
+
+- 疑似要素は`before`, `after`
+
+## 080 3d animation 1
+
+- 3Dアニメーションの場合、`transform-style: preserve-3d;`を指定する
+- `opacity`や`perspective`などを指定
+
+##
+
