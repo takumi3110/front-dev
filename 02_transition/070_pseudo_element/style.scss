@@ -19,7 +19,7 @@ $cBlack: black;
         position: relative;
         overflow: hidden;
         z-index: 1;
-        &::before {
+        &::before{
             content: '';
             display: inline-block;
             width: 100%;
