@@ -5,4 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // setTimeout(() => {
     //     hero.stop();
     // }, 5000);
+    const cb = function (el, isIntersectiong) {
+        if (isIntersectiong) {
+            const ta = new TweenTextAnimation(el);
+            ta.animate();
+        }
+    }
+
+    const so = new ScrollObserver('.tween-animate-title', cb);
 });
