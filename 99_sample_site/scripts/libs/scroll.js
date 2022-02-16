@@ -1,7 +1,7 @@
 
 class ScrollObserver {
     constructor(els, cb, options) {
-        this.els = document.querySelectorAll('.tween-animate-title');
+        this.els = document.querySelectorAll(els);
         const defaultOptions = {
             root: null,
             rootMargin: "0px",
