@@ -173,6 +173,9 @@
   transform: translate(-50%, -50%);
 }
 
+.hero {
+  overflow: hidden;
+}
 .hero__title {
   position: absolute;
   top: 50%;
@@ -364,17 +367,15 @@
   right: 0;
   bottom: 0;
   background-color: #eaebe6;
-  opacity: 0;
 }
 .cover-slide.inview::after {
-  opacity: 1;
   animation-name: kf-cover-slide;
   animation-duration: 1.6s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 
 @keyframes kf-cover-slide {
@@ -407,10 +408,10 @@
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
-  animation-fill-mode: normal;
+  animation-fill-mode: none;
 }
 .inview .img-zoom:hover {
-  transform: scale(1.3);
+  transform: scale(1.05);
 }
 
 @keyframes kf-img-show {
@@ -444,7 +445,7 @@
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
-  animation-fill-mode: normal;
+  animation-fill-mode: none;
 }
 .hover-darken:hover::before {
   background-color: rgba(0, 0, 0, 0.4);
@@ -464,7 +465,7 @@ img {
   vertical-align: bottom;
 }
 
-.font-sm {
+.font-sm, .sub-title {
   font-size: 14px;
 }
 
@@ -472,15 +473,15 @@ img {
   font-size: 17px;
 }
 
-.font-lr {
+.font-lr, .houses__titel {
   font-size: 17px;
 }
 
-.font-lg {
+.font-lg, .main-title {
   font-size: 25px;
 }
 
-.mb-sm {
+.mb-sm, .houses__titel {
   margin-bottom: 16px !important;
 }
 
@@ -496,10 +497,23 @@ img {
   margin-bottom: 80px !important;
 }
 
-.content-width {
+.content-width, .houses {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
+}
+
+.main-title {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.sub-title {
+  color: #535353;
+}
+
+.houses__btn {
+  text-align: center;
 }
 
 @media (min-width: 480px) {
@@ -522,7 +536,7 @@ img {
   Stylesheet: 960px以上のモニタで適用
 
   ******************************************************************/
-  .font-sm {
+  .font-sm, .sub-title {
     font-size: 16px;
   }
 
@@ -530,11 +544,11 @@ img {
     font-size: 19px;
   }
 
-  .font-lr {
+  .font-lr, .houses__titel {
     font-size: 23px;
   }
 
-  .font-lg {
+  .font-lg, .main-title {
     font-size: 36px;
   }
 

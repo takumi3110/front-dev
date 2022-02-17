@@ -1,10 +1,9 @@
-@import 'mixin';
-
 .cover-slide {
   position: relative;
   overflow: hidden;
+
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     z-index: 2;
     top: 0;
@@ -12,15 +11,15 @@
     right: 0;
     bottom: 0;
     background-color: #eaebe6;
-    opacity: 0;
   }
+
   &.inview {
     &::after {
-      opacity: 1;
       @include animation(
               $name: kf-cover-slide,
               $duration: 1.6s,
-              $timing-function:ease-in-out,
+              $timing-function: ease-in-out,
+              $fill-mode: both
       );
     }
   }
@@ -45,7 +44,6 @@
   }
 }
 
-
 .img-zoom {
   opacity: 0;
 
@@ -53,14 +51,14 @@
     opacity: 1;
     transition: transform 0.3s ease;
     @include animation(
-            $name:kf-img-show,
-            $duration:1.6s,
+            $name: kf-img-show,
+            $duration: 1.6s,
             $timing-function: ease-in-out,
-            $fill-mode: normal
+            $fill-mode: none
     );
 
     &:hover {
-      transform: scale(1.3);
+      transform: scale(1.05);
     }
   }
 }
@@ -83,7 +81,7 @@
 
 .hover-darken {
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -92,14 +90,36 @@
     z-index: 1;
     transition: background-color 0.3s ease;
     pointer-events: none;
+
     @include animation(
-            $name:kf-img-show,
-            $duration:1.6s,
+            $name: kf-img-show,
+            $duration: 1.6s,
             $timing-function: ease-in-out,
-            $fill-mode: normal
+            $fill-mode: none
     );
   }
+
   &:hover::before {
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
+
+//
+//.bg-img-zoom {
+//  background-image: url(images/image-1.jpg);
+//  background-repeat: no-repeat;
+//  background-position: center;
+//  background-size: cover;
+//  width: 100%;
+//  @extend .img-zoom;
+//}
+//
+//.img-bg50 {
+//  position: relative;
+//
+//  &::before {
+//    display: block;
+//    content: '';
+//    padding-top: 50%;
+//  }
+//}
