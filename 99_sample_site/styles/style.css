@@ -481,7 +481,7 @@ img {
   font-size: 25px;
 }
 
-.mb-sm, .popular__titel, .houses__titel {
+.mb-sm, .popular__titel, .houses__titel, .travel__img, .travel__sub {
   margin-bottom: 16px !important;
 }
 
@@ -489,7 +489,7 @@ img {
   margin-bottom: 80px !important;
 }
 
-.pb-sm, .popular__container {
+.pb-sm, .popular__container, .travel__texts {
   margin-bottom: 16px !important;
 }
 
@@ -497,7 +497,7 @@ img {
   margin-bottom: 80px !important;
 }
 
-.content-width, .popular__container, .popular__header, .houses {
+.content-width, .popular__container, .popular__header, .houses, .travel {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
@@ -512,11 +512,28 @@ img {
   color: #535353;
 }
 
-.flex, .popular__container, .houses__inner {
+.flex, .popular__container, .houses__inner, .travel__inner {
   display: flex;
   flex-direction: column;
 }
 
+.purple {
+  color: #904669;
+}
+
+.travel__inner {
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #eaebe6;
+}
+.travel__img {
+  height: 300px;
+}
+.travel__img > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 .houses__btn {
   text-align: center;
   flex-basis: 100%;
@@ -566,7 +583,7 @@ img {
   Stylesheet: 600px以上のタブレットやモニタで適用
 
   ******************************************************************/
-  .flex, .houses__inner, .popular__container {
+  .flex, .travel__inner, .houses__inner, .popular__container {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -581,6 +598,17 @@ img {
   }
   .popular__item {
     flex-basis: 47%;
+  }
+
+  .travel__inner {
+    padding: 50px;
+  }
+  .travel__texts, .travel__img {
+    flex-basis: 47%;
+  }
+  .travel__texts {
+    display: flex;
+    align-items: flex-end;
   }
 }
 @media (min-width: 960px) {
@@ -619,6 +647,13 @@ img {
   .popular__img {
     height: 335px;
   }
+
+  .travel__img {
+    height: 400px;
+  }
+  .travel__description {
+    margin-bottom: 40px;
+  }
 }
 @media (min-width: 1280px) {
   /******************************************************************
@@ -626,6 +661,10 @@ img {
   Stylesheet: 1280px以上のモニタで適用
 
   ******************************************************************/
+  .travel__inner {
+    padding: 50px 150px;
+  }
+
   .popular__item {
     flex-basis: 23%;
   }
