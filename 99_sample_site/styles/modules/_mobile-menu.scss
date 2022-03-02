@@ -9,6 +9,11 @@ $cMenuOpen: $cBlack;
   top: 60px;
   width: 300px;
 
+  & .logo {
+    padding: 0 40px;
+    font-size: 38px;
+  }
+
   &__btn {
     background-color: transparent;
     border: none;
@@ -40,6 +45,7 @@ $cMenuOpen: $cBlack;
     visibility: hidden;
     transition: opacity 1s;
     cursor: pointer;
+    z-index: 200;
   }
 
   &__main {
@@ -61,7 +67,7 @@ $cMenuOpen: $cBlack;
     display: block;
     margin-top: 30px;
     color: $cBlack;
-    text-decoration: none;
+    text-decoration: none !important;
   }
 }
 
