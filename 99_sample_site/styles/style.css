@@ -175,6 +175,7 @@
 
 .hero {
   overflow: hidden;
+  padding-top: 100px;
 }
 .hero__title {
   position: absolute;
@@ -585,7 +586,7 @@ img {
   margin-bottom: 16px !important;
 }
 
-.mb-lg {
+.mb-lg, .popular__btn, .houses, .travel {
   margin-bottom: 80px !important;
 }
 
@@ -593,7 +594,7 @@ img {
   margin-bottom: 16px !important;
 }
 
-.pb-lg {
+.pb-lg, .hero {
   margin-bottom: 80px !important;
 }
 
@@ -620,10 +621,6 @@ img {
 
 .purple {
   color: #904669;
-}
-
-#content {
-  padding-top: 100px;
 }
 
 #main-content {
@@ -920,11 +917,11 @@ main {
     font-size: 36px;
   }
 
-  .mb-lg {
+  .mb-lg, .travel, .houses, .popular__btn {
     margin-bottom: 150px !important;
   }
 
-  .pb-lg {
+  .pb-lg, .hero {
     margin-bottom: 150px !important;
   }
 
@@ -943,14 +940,8 @@ main {
     display: none;
   }
 
-  .travel__img {
-    height: 400px;
-  }
-  .travel__description {
-    margin-bottom: 40px;
-  }
-  .travel__title::before {
-    display: block;
+  .swiper-slide {
+    box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
   }
 }
 @media (min-width: 1280px) {
