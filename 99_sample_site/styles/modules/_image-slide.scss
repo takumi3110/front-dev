@@ -11,10 +11,13 @@
     right: 0;
     bottom: 0;
     background-color: #eaebe6;
+    opacity: 0;
   }
 
   &.inview {
     &::after {
+      opacity: 1;
+
       @include animation(
               $name: kf-cover-slide,
               $duration: 1.6s,
@@ -104,22 +107,20 @@
   }
 }
 
-//
-//.bg-img-zoom {
-//  background-image: url(images/image-1.jpg);
-//  background-repeat: no-repeat;
-//  background-position: center;
-//  background-size: cover;
-//  width: 100%;
-//  @extend .img-zoom;
-//}
-//
-//.img-bg50 {
-//  position: relative;
-//
-//  &::before {
-//    display: block;
-//    content: '';
-//    padding-top: 50%;
-//  }
-//}
+.bg-img-zoom {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  @extend .img-zoom;
+}
+
+.img-bg50 {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: '';
+    padding-top: 50%;
+  }
+}

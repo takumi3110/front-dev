@@ -368,8 +368,10 @@
   right: 0;
   bottom: 0;
   background-color: #eaebe6;
+  opacity: 0;
 }
 .cover-slide.inview::after {
+  opacity: 1;
   animation-name: kf-cover-slide;
   animation-duration: 1.6s;
   animation-timing-function: ease-in-out;
@@ -397,10 +399,10 @@
     transform: scaleX(0);
   }
 }
-.img-zoom {
+.img-zoom, .bg-img-zoom {
   opacity: 0;
 }
-.inview .img-zoom {
+.inview .img-zoom, .inview .bg-img-zoom {
   opacity: 1;
   transition: transform 0.3s ease;
   animation-name: kf-img-show;
@@ -411,7 +413,7 @@
   animation-direction: normal;
   animation-fill-mode: none;
 }
-.inview .img-zoom:hover {
+.inview .img-zoom:hover, .inview .bg-img-zoom:hover {
   transform: scale(1.05);
 }
 
@@ -450,6 +452,22 @@
 }
 .hover-darken:hover::before {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bg-img-zoom {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.img-bg50 {
+  position: relative;
+}
+.img-bg50::before {
+  display: block;
+  content: "";
+  padding-top: 50%;
 }
 
 /******************************************************************
