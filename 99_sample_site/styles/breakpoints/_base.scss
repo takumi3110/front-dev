@@ -165,12 +165,6 @@ main {
       transition: transform 0.3s ease 1.6s;
       transform-origin: right;
     }
-
-    &.inview {
-      &::before {
-        transform: translateY(-50%);
-      }
-    }
   }
 
   &__sub {
@@ -197,6 +191,12 @@ main {
 
   &__texts {
     @extend .pb-sm;
+
+    &.inview {
+      & .travel__title::before {
+        transform: translateY(-50%);
+      }
+    }
   }
 }
 
@@ -208,7 +208,7 @@ main {
     @extend .flex;
   }
 
-  &__titel {
+  &__title {
     @extend .font-lr;
     @extend .mb-sm;
   }
@@ -247,7 +247,7 @@ main {
     @extend .pb-sm;
   }
 
-  &__titel {
+  &__title {
     @extend .font-md;
     @extend .mb-sm;
   }
