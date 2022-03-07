@@ -56,20 +56,20 @@ Stylesheet: 960px以上のモニタで適用
 
 }
 
-//
-//.travel {
-//
-//  &__img {
-//    height: 400px;
-//  }
-//
-//  &__description {
-//    margin-bottom: 40px;
-//  }
-//
-//  &__title {
-//    &::before {
-//      display: block;
-//    }
-//  }
-//}
+
+.travel {
+
+  &__img {
+    height: 400px;
+  }
+
+  &__description {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    &::before {
+      display: block;
+    }
+  }
+}

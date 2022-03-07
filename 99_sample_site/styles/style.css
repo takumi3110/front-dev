@@ -914,10 +914,10 @@ main {
   background-size: contain;
 }
 .icon.twitter::before {
-  background-image: url(../../images/twitter.svg);
+  background-image: url(../images/twitter.svg);
 }
 .icon.fb::before {
-  background-image: url(../../images/facebook.svg);
+  background-image: url(../images/facebook.svg);
 }
 
 @media (min-width: 480px) {
@@ -1016,6 +1016,16 @@ main {
 
   .swiper-slide {
     box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+  }
+
+  .travel__img {
+    height: 400px;
+  }
+  .travel__description {
+    margin-bottom: 40px;
+  }
+  .travel__title::before {
+    display: block;
   }
 }
 @media (min-width: 1280px) {
