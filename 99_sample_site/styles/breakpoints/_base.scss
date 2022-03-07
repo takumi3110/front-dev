@@ -322,18 +322,22 @@ main {
   position: fixed;
   top: 70%;
   transform: translateY(-50%);
-  color: $cBlack;
+  transition: all .3s ease-in;
 
-  & a,
-  & span {
+  & .tween-animate-title{
     color: $cBlack;
     text-decoration: none !important;
     margin: 0 40px;
     vertical-align: middle;
+    letter-spacing: 2px;
   }
 
   &.left {
-    left: 50px;
+    left: -50px;
+
+    &.inview {
+      left: 50px;
+    }
 
     & .side__inner {
       transform-origin: top left;
@@ -341,7 +345,11 @@ main {
     }
   }
   &.right {
-    right: 50px;
+    right: -50px;
+
+    &.inview {
+      right: 50px;
+    }
 
     & .side__inner {
       transform-origin: top right;
