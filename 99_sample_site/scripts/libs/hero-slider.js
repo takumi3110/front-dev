@@ -11,12 +11,12 @@ class HeroSlider {
             loop: true,
             grabCursor: true,
             effect: 'coverflow',
-            centerdSlides: true,
+            centeredSlides: true,
             slidesPerView: 1,
             speed: 1000,
             breakpoints: {
                 1024: {
-                    slidesPerView: 2,
+                    slidesPerView: 1.5,
                 }
             },
 
