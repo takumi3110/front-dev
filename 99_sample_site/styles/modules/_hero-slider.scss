@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixin';
 
 .swiper {
   overflow: visible !important;
@@ -98,5 +99,4 @@
   30% {
     transform: none;
   }
-
 }
